@@ -1,0 +1,99 @@
+:root {
+  --color-primary: #0F52BA;        /* Medical Blue */
+  --color-primary-dark: #0A387E;   /* Deep Sapphire Blue */
+  --color-primary-light: #EBF3FF;  /* Light Blue Tint */
+  --color-teal: #0D9488;           /* Clinical Teal */
+  --color-teal-light: #F0FDFA;     /* Soft Mint Tint */
+  --color-accent: #14B8A6;         /* Bright Teal Accent */
+  --color-bg: #F8FAFC;             /* Clinical Crisp Gray-White */
+  --color-surface: #FFFFFF;        /* Pure White Surface */
+  --color-text: #0F172A;           /* Deep Slate Body Text */
+  --color-text-muted: #64748B;     /* Muted Slate */
+  --color-border: #E2E8F0;         /* Clean Border Line */
+  --color-error: #EF4444;          /* Critical Status */
+  --color-success: #10B981;        /* Healthy / Active Status */
+  --color-warning: #F59E0B;        /* Pending / Caution */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 900px) {
+  .desktop-nav-links {
+    display: flex !important;
+  }
+}
+
+/* Patient Portal Responsive Styles */
+.patient-hamburger-btn {
+  display: none;
+}
+
+.mobile-close-btn {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .patient-header-name {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-hamburger-btn {
+    display: flex !important;
+  }
+
+  .mobile-close-btn {
+    display: flex !important;
+  }
+
+  .patient-sidebar {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar-closed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-open {
+    transform: translateX(0);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
